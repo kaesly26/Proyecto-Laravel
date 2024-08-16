@@ -10,6 +10,9 @@
 </head>
 
 <body>
+    <div>
+        <img src="img/images.png" height="70px" width="70px">
+    </div>
     <h1 class="text-center">Empleado escogido</h1><br>
     <table class="table table-bordered table-striped">
         <thead>

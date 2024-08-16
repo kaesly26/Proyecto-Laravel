@@ -106,7 +106,7 @@
                         </form>
                     </td>
                     <td>
-                        <a href="{{route('UserPdf',$registro->id)}}"  class="btn pdf" target="_blank">PDF</a>
+                        <a href="{{route('UserPdf',$registro->id)}}" class="btn pdf" target="_blank">PDF</a>
                     </td>
                 </tr>
                 @endforeach

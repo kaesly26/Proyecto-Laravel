@@ -10,6 +10,9 @@
 </head>
 
 <body>
+    <div>
+        <img src="img/images.png" height="90px" width="90px">
+    </div>
     <h1 class="text-center">Lista de empleados</h1><br>
     <table class="table table-bordered table-striped">
         <thead>

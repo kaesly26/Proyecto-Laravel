@@ -106,7 +106,7 @@
                         </form>
                     </td>
                     <td>
-                        <a href="<?php echo e(route('UserPdf',$registro->id)); ?>"  class="btn pdf" target="_blank">PDF</a>
+                        <a href="<?php echo e(route('UserPdf',$registro->id)); ?>" class="btn pdf" target="_blank">PDF</a>
                     </td>
                 </tr>
                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
