@@ -1,0 +1,92 @@
+.navbar {
+    background: #525ca3;
+}
+
+.div {
+    padding: 20px 20px;
+    margin: 40px 30px;
+}
+.container-buscar {
+    position: relative;
+    width: 400px;
+    margin: 20px auto;
+    padding: 10px;
+}
+input.form-control {
+    margin-right: 10px;
+}
+.container-boton {
+    position: relative;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+.dropdown {
+    background: #474e86;
+    border-radius: 4px;
+    border: 0 solid transparent;
+}
+
+.btn-menu {
+    color: white;
+    width: 100px;
+    height: 50px;
+}
+.btn-menu:focus {
+    outline: none;
+    box-shadow: none;
+}
+.btn-menu:hover {
+    color: white;
+    background: #8ca1ce;
+}
+
+a {
+    margin: 10px auto;
+}
+
+form .btn-color {
+    background: #474e86;
+    color: white;
+}
+
+form .btn-color:hover {
+    background: #8ca1ce;
+    color: white;
+}
+a.pdf {
+    background: #474e86;
+    color: white;
+}
+a.pdf:hover {
+    background: #8ca1ce;
+    color: white;
+}
+.custom-pagination .pagination {
+    display: flex;
+    justify-content: center;
+}
+
+.custom-pagination .pagination .page-item .page-link {
+    color: #2d3c5c;
+    border: 1px solid #dee2e6;
+    margin: 0 2px;
+}
+
+.custom-pagination .pagination .page-item .page-link:hover {
+    color: white;
+    background-color: #525ca3;
+    border-color: #474e86;
+}
+
+.custom-pagination .pagination .page-item.active .page-link {
+    color: white;
+    background-color: #525ca3;
+    border-color: #474e86;
+}
+
+.custom-pagination .pagination .page-item.disabled .page-link {
+    color: #6c757d;
+    background-color: #ffffff;
+    border-color: #dee2e6;
+}
