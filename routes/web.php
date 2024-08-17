@@ -8,7 +8,9 @@ use App\Http\Controllers\principalController;
 
 Route::get('/', homeController::class);
 
-Route::get('clientes',principalController::class, 'ingresar' )->name('admin.ingresar');
+Route::get('clientes',[principalController::class, 'ingresar'])->name('admin.ingresar');
+
+Route::get('categoria', [principalController::class, 'crearCategoria'])->name('categoria');
 
 Route::resource('personas', personaController::class)->middleware('auth');
 

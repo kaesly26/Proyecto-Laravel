@@ -10,4 +10,8 @@ class principalController extends Controller
     {
       return view('layouts.welcome');
     }
+
+    public function crearCategoria(){
+      return view('createCategoria');
+    }
 }
