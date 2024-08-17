@@ -26,6 +26,7 @@
         <tbody>
             <?php $__currentLoopData = $persona; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $person): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <tr>
+                <td><img src="<?php echo e(Storage::url($person->user_photo)); ?>" alt="foto perfil" width="60px" height="60px"></td>
                 <td><?php echo e($person->name); ?></td>
                 <td><?php echo e($person->lastname); ?></td>
                 <td><?php echo e($person->birthdate); ?></td>

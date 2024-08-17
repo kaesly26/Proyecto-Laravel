@@ -4,8 +4,11 @@ use App\Http\Controllers\adminController;
 use App\Http\Controllers\homeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\personaController;
+use App\Http\Controllers\principalController;
 
 Route::get('/', homeController::class);
+
+Route::get('clientes',principalController::class, 'ingresar' )->name('admin.ingresar');
 
 Route::resource('personas', personaController::class)->middleware('auth');
 
