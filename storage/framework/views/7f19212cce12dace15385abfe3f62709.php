@@ -11,7 +11,7 @@
 </head>
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark ">
-        <h1 class="title"><a class="item" href="<?php echo e(url('/')); ?>">Bienvenido, Administrador</a></h1>
+        <h1 class="title"><a class="item" href="<?php echo e(url('/')); ?>">Bienvenido,Administrador</a></h1>
         <ul class="navbar-nav ms-auto">
             <li class="nav-item">
                 <a class="item" href="<?php echo e(route('admin.show.login')); ?>">iniciar sesion</a>

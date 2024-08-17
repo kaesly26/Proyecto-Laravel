@@ -10,7 +10,11 @@ body{
     background: #EAEBEF;
     font-family: 'Poppins', sans-serif;
 }
-
+.container{
+    position: absolute;
+    top: 30px;
+    margin: 0 40px;
+}
 .nav{
     width: 300px;
 }
