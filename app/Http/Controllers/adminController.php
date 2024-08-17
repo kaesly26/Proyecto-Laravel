@@ -71,6 +71,6 @@ class adminController extends Controller
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
-        return view('layouts.welcome');
+        return view('layouts.principal');
     }
 }
