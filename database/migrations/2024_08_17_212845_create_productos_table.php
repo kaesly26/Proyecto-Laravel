@@ -15,7 +15,6 @@ return new class extends Migration
             $table->id('id_producto');
             $table->string('nombre_producto');
             $table->decimal('precio', 8, 2);
-            $table->integer('stock');
             $table->text('descripcion')->nullable();
             $table->unsignedBigInteger('id_categoria');
             $table->foreign('id_categoria')->references('id_categoria')->on('categorias')->onDelete('cascade');
