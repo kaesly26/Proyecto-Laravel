@@ -10,8 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="<?php echo e(asset('css/style.css')); ?>" />
 </head>
-
-<body>
+<header>
     <div class="container">
         <img src="img/Russo.png" alt="" height="150px" width="150px">
     </div>
@@ -22,7 +21,7 @@
             <li class="list__item">
                 <div class="list__button">
                     <img src="assets/dashboard.svg" class="list__img">
-                    <a href="#" class="nav__link">Inicio</a>
+                    <a href="<?php echo e(asset('/')); ?>" class="nav__link">Inicio</a>
                 </div>
             </li>
 
@@ -39,7 +38,7 @@
                     </li>
 
                     <li class="list__inside">
-                        <a href="#" class="nav__link nav__link--inside">Crear Producto</a>
+                        <a href="<?php echo e(route('crearProducto')); ?>" class="nav__link nav__link--inside">Crear Producto</a>
                     </li>
                 </ul>
 
@@ -97,10 +96,15 @@
         </ul>
     </nav>
 
+</header>
+
+<body>
+
     <div class="container">
         <?php echo $__env->yieldContent('content'); ?>
     </div>
     <script src="<?php echo e(asset('js/main.js')); ?>"></script>
+    <?php echo $__env->yieldContent('scripts'); ?>
 </body>
 
 </html><?php /**PATH C:\xampp\htdocs\proyecto_laravel\resources\views/layouts/principal.blade.php ENDPATH**/ ?>

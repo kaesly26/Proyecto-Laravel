@@ -13,6 +13,11 @@ Route::get('clientes',[principalController::class, 'ingresar'])->name('admin.ing
 Route::get('categoria', [principalController::class, 'crearCategoria'])->name('categoria');
 Route::post('categoria', [principalController::class, 'guardarCategoria'])->name('guardar');
 
+Route::get('productos', [principalController::class, 'crearProductos'])->name('crearProducto');
+Route::post('productos', [principalController::class, 'guardarProducto'])->name('guardarProducto');
+
+
+/*RUTAS INICIO ADMIN */
 Route::resource('personas', personaController::class)->middleware('auth');
 
 Route::get('admin/login', [adminController::class, 'showLoginForm'])->name('admin.show.login');

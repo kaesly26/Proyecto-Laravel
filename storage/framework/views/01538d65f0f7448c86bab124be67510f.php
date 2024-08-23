@@ -91,7 +91,7 @@
             <tbody>
                 <?php $__currentLoopData = $registros; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $registro): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                 <tr>
-                    <td><img src="<?php echo e(Storage::url($registro->user_photo)); ?>" alt="foto perfil" width="60px" height="60px"></td>
+                    <td><img src="<?php echo e($registro->user_photo_url); ?>" alt="foto perfil" width="60px" height="60px"></td>
                     <td><?php echo e($registro->name); ?></td>
                     <td><?php echo e($registro->lastname); ?></td>
                     <td><?php echo e($registro->birthdate); ?></td>

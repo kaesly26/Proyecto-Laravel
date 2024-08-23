@@ -91,7 +91,7 @@
             <tbody>
                 @foreach ($registros as $registro)
                 <tr>
-                    <td><img src="{{Storage::url($registro->user_photo)}}" alt="foto perfil" width="60px" height="60px"></td>
+                    <td><img src="{{ $registro->user_photo_url }}" alt="foto perfil" width="60px" height="60px"></td>
                     <td>{{$registro->name}}</td>
                     <td>{{$registro->lastname}}</td>
                     <td>{{$registro->birthdate}}</td>
