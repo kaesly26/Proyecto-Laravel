@@ -9,9 +9,13 @@ use Illuminate\Http\Request;
 
 class principalController extends Controller
 {
+  public function __construct()
+  {
+    $this->middleware('auth');
+  }
   public function ingresar()
   {
-    return view('layouts.welcome');
+    return view('layouts.principal');
   }
 
   public function crearCategoria()

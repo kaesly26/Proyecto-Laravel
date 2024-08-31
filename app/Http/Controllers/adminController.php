@@ -34,7 +34,7 @@ class adminController extends Controller
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
 
-            return redirect()->intended('personas');
+            return redirect()->intended('principal');
         } else {
 
             return redirect()->route('admin.show.login');
@@ -71,6 +71,6 @@ class adminController extends Controller
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
-        return view('layouts.principal');
+        return view('layouts.welcome');
     }
 }

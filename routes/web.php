@@ -8,7 +8,7 @@ use App\Http\Controllers\principalController;
 
 Route::get('/', homeController::class);
 
-Route::get('clientes',[principalController::class, 'ingresar'])->name('admin.ingresar');
+Route::get('principal',[principalController::class, 'ingresar'])->name('principal')->middleware('auth');
 
 Route::get('categoria', [principalController::class, 'crearCategoria'])->name('categoria');
 Route::post('categoria', [principalController::class, 'guardarCategoria'])->name('guardar');
@@ -18,7 +18,7 @@ Route::post('productos', [principalController::class, 'guardarProducto'])->name(
 
 
 /*RUTAS INICIO ADMIN */
-Route::resource('personas', personaController::class)->middleware('auth');
+Route::resource('personas', personaController::class);
 
 Route::get('admin/login', [adminController::class, 'showLoginForm'])->name('admin.show.login');
 Route::get('admin/register',[adminController::class, 'showRegister'])->name('show.register');

@@ -21,13 +21,7 @@
             <div class="text-danger">{{ $errors->first('precio') }}</div>
             @endif
         </div>
-        <!-- <div class="mb-3">
-            <label class="form-label">Cantidad</label><br>
-            <input type="number" name="stock" value="{{ old('stock') }}" required>
-            @if ($errors->has('stock'))
-            <div class="text-danger">{{ $errors->first('stock') }}</div>
-            @endif
-        </div> -->
+    
         <div class="mb-3">
             <label class="form-label">Descripción</label><br>
             <textarea name="descripcion" rows="4" cols="20" required>{{ old('descripcion') }}</textarea>
@@ -42,7 +36,7 @@
                 <option value="{{ $categoria->id_categoria }}" {{ old('id_categoria') == $categoria->id ? 'selected' : '' }}>{{ $categoria->nombre_categoria }}</option>
                 @endforeach
             </select>
-
+            
             @if ($errors->has('id_categoria'))
             <div class="text-danger">{{ $errors->first('id_categoria') }}</div>
             @endif

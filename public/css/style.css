@@ -102,3 +102,11 @@ body {
     margin: 50px 90px;
     padding: 40px 40px;
 }
+
+div.form-logout {
+    position: absolute;
+    top: 50px;
+}
+button.logout {
+    margin-left: 1200px;
+}
