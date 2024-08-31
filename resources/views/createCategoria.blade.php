@@ -18,7 +18,6 @@
         <button type="submit">Guardar</button>
     </form>
     <br>
-   
 </div>
 
 @endsection

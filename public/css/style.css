@@ -87,22 +87,35 @@ body {
     height: 0;
 }
 
+
 .form-container {
     position: relative;
-    margin-left: 500px;
     background: white;
     border-radius: 4px;
-    width: 580px;
-    height: 600px;
+    width: 700px;
+    padding: 20px;
+    margin-left: 400px;
 }
 .form-categoria {
-    position: absolute;
-    height: 400px;
-    width: 400px;
-    margin: 50px 90px;
+    margin: 0 auto;
     padding: 40px 40px;
+    width: 100%
+}
+.table {
+    width: 100%; /* La tabla ocupa todo el ancho del contenedor */
+    margin-bottom: 20px; /* Espacio inferior para separar del contenido siguiente */
 }
 
+/* Estilo para la cabecera de la tabla */
+.table th,
+.table td {
+    text-align: left;
+    padding: 10px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
 div.form-logout {
     position: absolute;
     top: 50px;

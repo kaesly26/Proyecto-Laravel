@@ -1,23 +1,25 @@
 <?php
 
 use App\Http\Controllers\adminController;
+use App\Http\Controllers\categoriaController;
 use App\Http\Controllers\homeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\personaController;
 use App\Http\Controllers\principalController;
+use App\Models\Categoria;
 
 Route::get('/', homeController::class);
 
 Route::get('principal',[principalController::class, 'ingresar'])->name('principal')->middleware('auth');
 
-Route::get('categoria', [principalController::class, 'crearCategoria'])->name('categoria');
-Route::post('categoria', [principalController::class, 'guardarCategoria'])->name('guardar');
+Route::get('categoria', [categoriaController::class, 'crearCategoria'])->name('categoria');
+Route::post('categoria', [categoriaController::class, 'guardarCategoria'])->name('guardar');
+Route::get('lista', [categoriaController::class, 'showCategory'])->name('lista');
 
 Route::get('productos', [principalController::class, 'crearProductos'])->name('crearProducto');
 Route::post('productos', [principalController::class, 'guardarProducto'])->name('guardarProducto');
 
 
-/*RUTAS INICIO ADMIN */
 Route::resource('personas', personaController::class);
 
 Route::get('admin/login', [adminController::class, 'showLoginForm'])->name('admin.show.login');
