@@ -14,14 +14,29 @@
     <div class="container">
         <img src="img/Russo.png" alt="" height="150px" width="150px">
     </div>
-
+    <div class="form-logout">
+        <form action="{{route('logout')}}" method="get">
+            <button type="submit" class="btn logout dropdown-toggle" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-expanded="false">
+                @if(Auth::check())
+                <a>{{ Auth::user()->name_user }}</a>
+                @endif
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li>
+                    <form action="{{route('logout')}}" method="get">
+                        <button type="submit" class="dropdown-item">Logout</button>
+                    </form>
+                </li>
+            </ul>
+        </form>
+    </div>
     <nav class="nav">
         <ul class="list">
 
             <li class="list__item">
                 <div class="list__button">
                     <img src="assets/dashboard.svg" class="list__img">
-                    <a href="{{ asset('/') }}" class="nav__link">Inicio</a>
+                    <a href="{{ route('principal') }}" class="nav__link">Inicio</a>
                 </div>
             </li>
 
@@ -82,7 +97,7 @@
             <li class="list__item">
                 <div class="list__button">
                     <img src="assets/message.svg" class="list__img">
-                    <a href="{{ route('admin.ingresar')}}" class="nav__link">Clientes</a>
+                    <a href="{{ route('personas.index')}}" class="nav__link">Clientes</a>
                 </div>
             </li>
 
@@ -103,6 +118,8 @@
     <div class="container">
         @yield('content')
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-J0VaoR5JmxPbqzWLbJxZIfpCge9m/gc1+Mx2Axv75OmDAaG5VxlpqUuOcUoh2tcE" crossorigin="anonymous"></script>
     <script src="{{ asset('js/main.js')}}"></script>
     @yield('scripts')
 </body>
