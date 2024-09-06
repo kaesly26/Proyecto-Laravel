@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Categoria extends Model
 {
     use HasFactory;
-    protected $table = 'categorias';
+    protected $primaryKey= 'id_categoria', $table = 'categorias';
 
     public function productos()
     {
