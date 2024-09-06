@@ -7,18 +7,18 @@ use App\Models\Categoria;
 
 class categoriaController extends Controller
 {
-
-    public function crearCategoria()
-    {
-        return view('createCategoria');
-    }
-
-    public function showCategory()
+   public function index()
     {
         $categorias = Categoria::all();
         return view('showCategory', compact('categorias'));
     }
-    public function guardarCategoria(Request $request)
+
+    public function create()
+    {
+        return view('createCategoria');
+    }
+
+    public function store(Request $request)
     {
         $request->validate([
             'nombre_categoria' => 'required|string|min:4|max:100',
@@ -30,12 +30,13 @@ class categoriaController extends Controller
         $categoria->descripcion_categoria = $request->input('descripcion_categoria');
         $categoria->save();
 
-        return redirect()->route('lista');
+        return redirect()->route('categoria.index');
     }
-    public function eliminarCategoria($id)
+
+    public function destroy($id)
     {
         $eliminar = Categoria::findOrFail($id);
         $eliminar->delete();
-        return redirect()->route('lista');
+        return redirect()->route('categoria.index');
     }
 }
