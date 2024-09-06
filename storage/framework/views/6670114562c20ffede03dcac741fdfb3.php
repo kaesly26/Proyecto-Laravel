@@ -5,7 +5,7 @@
 <?php $__env->startSection('content'); ?>
 
 <div class="form-container">
-    <form action="<?php echo e(route('guardarProducto')); ?>" method ="post" class="form-categoria">
+    <form action="<?php echo e(route('productos.store')); ?>" method ="post" class="form-categoria">
         <?php echo csrf_field(); ?>
         <div class="mb-3">
             <label class="form-label">Nombre Producto</label><br>

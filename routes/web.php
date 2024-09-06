@@ -6,18 +6,18 @@ use App\Http\Controllers\homeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\personaController;
 use App\Http\Controllers\principalController;
-use App\Models\Categoria;
+use App\Http\Controllers\productoController;
 
 Route::get('/', homeController::class);
 
 Route::get('principal',[principalController::class, 'ingresar'])->name('principal')->middleware('auth');
 
-Route::get('categoria', [categoriaController::class, 'crearCategoria'])->name('categoria');
-Route::post('categoria', [categoriaController::class, 'guardarCategoria'])->name('guardar');
-Route::get('lista', [categoriaController::class, 'showCategory'])->name('lista');
+Route::resource('categoria', categoriaController::class);
 
-Route::get('productos', [principalController::class, 'crearProductos'])->name('crearProducto');
-Route::post('productos', [principalController::class, 'guardarProducto'])->name('guardarProducto');
+Route::resource('productos', productoController::class);
+
+// Route::get('productos', [productoController::class, 'crearProductos'])->name('crearProducto');
+// Route::post('productos', [productoController::class, 'guardarProducto'])->name('guardarProducto');
 
 
 Route::resource('personas', personaController::class);

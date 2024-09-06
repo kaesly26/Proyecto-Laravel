@@ -5,7 +5,7 @@
 @section('content')
 
 <div class="form-container">
-    <form action="{{ route('guardarProducto') }}" method ="post" class="form-categoria">
+    <form action="{{ route('productos.store') }}" method ="post" class="form-categoria">
         @csrf
         <div class="mb-3">
             <label class="form-label">Nombre Producto</label><br>

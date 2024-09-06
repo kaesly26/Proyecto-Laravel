@@ -6,9 +6,14 @@
 
 <div class="form-container">
     <div class="form-categoria">
+        <form action="{{ route('categoria.create')}}" method="get">
+            @csrf
+            <button type="submit">Crear Categoria</button>
+        </form>
         <table class="table table-bordered table-striped">
             <thead>
                 <h4>Lista de categorias</h4>
+
                 <tr>
                     <th>Id categoria</th>
                     <th>Nombre Categoria</th>
@@ -26,14 +31,31 @@
                         <a href="">Editar</a>
                     </td>
                     <td>
-                        <button>Eliminar</button>
+                        <button type="submit" onclick="confirmDelete('{{ $categoria->id_categoria}}')">Eliminar</button>
                     </td>
                 </tr>
                 @endforeach
             </tbody>
         </table>
-        <a href="{{ route('categoria')}}">crear categoria</a>
+
     </div>
 </div>
+<script>
+    function confirmDelete(id) {
+        alertify.confirm(" ¿Deseas eliminar este registro?", function(e) {
+            if (e) {
+                let form = document.createElement('form');
+                form.method = 'POST';
+                form.action = '/categoria/' + id;
+                form.innerHTML = '@csrf @method("DELETE")';
+                document.body.appendChild(form);
+                form.submit();
+            } else {
+                alertify.error('Cancelar');
+                return false;
+            }
+        });
+    }
+</script>
 
 @endsection

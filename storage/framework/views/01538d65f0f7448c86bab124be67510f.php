@@ -17,9 +17,9 @@
         <div class="container">
             <ul class="nav nav-pills card-header-pills">
                 <li class="nav-item">
-                    <a href="<?php echo e(route('principal')); ?>" class="navbar-brand d-flex align-items-center text-white">
+                    <a href="" class="navbar-brand d-flex align-items-center text-white">
                         <strong>
-                            <h1>Bienvenido</h1>
+                            <h1>Lista de clientes</h1>
                         </strong>
                     </a>
                 </li>
