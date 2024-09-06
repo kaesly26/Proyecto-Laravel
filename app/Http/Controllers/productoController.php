@@ -8,13 +8,19 @@ use App\Models\Categoria;
 
 class productoController extends Controller
 {
-    public function crearProductos()
+    public function index()
+    {
+       $productos = Producto::all();
+       return view('showProduct', compact('productos'));
+    }
+
+    public function create()
     {
         $categorias = Categoria::all();
         return view('crearProducto', compact('categorias'));
     }
 
-    public function guardarProducto(Request $request)
+    public function store(Request $request)
     {
         $request->validate(
             [
@@ -43,6 +49,15 @@ class productoController extends Controller
         $producto->id_categoria = $request->input('id_categoria');
         $producto->save();
 
-        return view('layouts.principal');
+        return redirect()->route('productos.index');
+    }
+    
+
+
+    public function destroy($id_producto)
+    {
+        $eliminar = Producto::findOrFail($id_producto);
+        $eliminar->delete();
+        return redirect()->route('productos.index');
     }
 }
