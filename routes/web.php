@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\personaController;
 use App\Http\Controllers\principalController;
 use App\Http\Controllers\productoController;
+use App\Http\Controllers\PedidoController;
 
 Route::get('/', homeController::class);
 
@@ -16,11 +17,10 @@ Route::resource('categoria', categoriaController::class);
 
 Route::resource('productos', productoController::class);
 
-// Route::get('productos', [productoController::class, 'crearProductos'])->name('crearProducto');
-// Route::post('productos', [productoController::class, 'guardarProducto'])->name('guardarProducto');
-
-
 Route::resource('personas', personaController::class);
+
+Route::resource('pedidos', PedidoController::class);
+
 
 Route::get('admin/login', [adminController::class, 'showLoginForm'])->name('admin.show.login');
 Route::get('admin/register',[adminController::class, 'showRegister'])->name('show.register');

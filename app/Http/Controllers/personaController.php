@@ -25,7 +25,7 @@ class personaController extends Controller
         $registros = Persona::where('name', 'LIKE', "%$query%")
             ->orWhere('lastname', 'LIKE', "%$query%")
             ->paginate(5);
-        return view('home', compact('registros'));
+        return view('layouts.home', compact('registros'));
     }
 
     public function createPdf()

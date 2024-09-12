@@ -84,7 +84,7 @@
                     </li>
 
                     <li class="list__inside">
-                        <a href="#" class="nav__link nav__link--inside">Nuevos Pedido </a>
+                        <a href="{{route('pedidos.index')}}" class="nav__link nav__link--inside">Nuevos Pedido </a>
                     </li>
 
                     <li class="list__inside">
