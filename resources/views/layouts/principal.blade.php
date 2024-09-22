@@ -120,6 +120,24 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <script src="{{ asset('js/main.js')}}"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const buttons = document.querySelectorAll('[data-toggle="collapse"]');
+
+            buttons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const targetId = button.getAttribute('data-target');
+                    const targetElement = document.querySelector(targetId);
+
+                    if (targetElement.style.display === 'none' || !targetElement.style.display) {
+                        targetElement.style.display = 'block';
+                    } else {
+                        targetElement.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
     @yield('scripts')
 </body>
 

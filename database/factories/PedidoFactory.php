@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Pedido;
+use App\Models\Persona;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -15,7 +16,7 @@ class PedidoFactory extends Factory
     public function definition()
     {
         return [
-            'cliente_id' => $this->faker->numberBetween(1, 10), // Asume que tienes clientes con IDs entre 1 y 10
+            'cliente_id' => Persona::factory(),  
             'total_pedido' => $this->faker->randomFloat(2, 100, 500), // Total entre 100 y 500
             'estado' => $this->faker->randomElement(['pendiente', 'preparando', 'entregado', 'cancelado']),
             'fecha_pedido' => $this->faker->dateTimeThisYear(),

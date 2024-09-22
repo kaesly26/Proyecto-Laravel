@@ -8,20 +8,19 @@ use Illuminate\Http\Request;
 
 class PedidoController extends Controller
 {
-    public function index()
-    {
-        $pedidosNuevos = Pedido::with(['productos', 'cliente'])
-        ->get();
+  public function index()
+  {
+    $pedidos = Pedido::with(['productos', 'cliente'])
+      ->paginate(10);
 
-        return view('pedidos', compact('pedidosNuevos'));
-    }
+    return view('pedidos', compact('pedidos'));
+  }
 
-    public function show($id)
-    {
-      $pedido = Pedido::with('productos')->findOrFail($id);
+  public function show($id)
+  {
+    $pedido = Pedido::with('productos')->findOrFail($id);
 
-    // Devolver los productos en formato JSON
+    // Devuelve los productos del pedido en formato JSON
     return response()->json($pedido->productos);
-    }
-    
+  }
 }
