@@ -92,7 +92,7 @@ body {
     position: relative;
     background: white;
     border-radius: 4px;
-    width: 700px;
+    width: 760px;
     padding: 20px;
     margin-left: 400px;
 }
@@ -121,5 +121,5 @@ div.form-logout {
     top: 50px;
 }
 button.logout {
-    margin-left: 1200px;
+    margin-left: 1240px;
 }

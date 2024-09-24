@@ -10,8 +10,8 @@ class productoController extends Controller
 {
     public function index()
     {
-       $productos = Producto::all();
-       return view('showProduct', compact('productos'));
+        $productos = Producto::all();
+        return view('showProduct', compact('productos'));
     }
 
     public function create()
@@ -51,7 +51,32 @@ class productoController extends Controller
 
         return redirect()->route('productos.index');
     }
-    
+    public function edit(string $id)
+    {
+        $update = Producto::find($id);
+        $categorias = Categoria::all();
+        return view('crearProducto', compact('update', 'categorias'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $request->validate([
+            'nombre' => 'required|string|min:4|max:100',
+            'precio' => 'required|numeric|min:0',
+            'descripcion' => 'required|min:10|max:200',
+            'id_categoria' => 'required|exists:categorias,id_categoria',
+        ]);
+
+        $producto = Producto::findOrFail($id);
+        $producto->nombre_producto = $request->input('nombre');
+        $producto->precio = $request->input('precio');
+        $producto->descripcion = $request->input('descripcion');
+        $producto->id_categoria = $request->input('id_categoria');
+        $producto->save();
+
+        return redirect()->route('productos.index');
+    }
+
 
 
     public function destroy($id_producto)

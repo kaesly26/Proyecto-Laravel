@@ -1,70 +1,98 @@
+/* Estilos para la barra de navegación */
 .navbar {
     background: #525ca3;
+    padding: 15px; /* Añadir padding para evitar que el contenido se vea pegado a los bordes */
 }
 
+/* Contenedor principal */
 .div {
-    padding: 20px 20px;
-    margin: 40px 30px;
+    padding: 20px;
+    margin: 40px auto; /* Asegura que el margen sea consistente y centraliza el contenido */
 }
+
+/* Contenedor para el área de búsqueda */
 .container-buscar {
     position: relative;
-    width: 400px;
+    width: 100%; /* Cambia el ancho para que sea más responsivo */
+    max-width: 400px; /* Limita el tamaño máximo */
     margin: 20px auto;
     padding: 10px;
 }
+
+/* Input de búsqueda */
 input.form-control {
     margin-right: 10px;
+    width: calc(100% - 100px); /* Ajusta el tamaño para que el botón y el input quepan juntos */
 }
+
+/* Contenedor para los botones */
 .container-boton {
     position: relative;
     margin: 20px auto;
     padding: 10px;
 }
 
+/* Dropdown */
 .dropdown {
     background: #474e86;
     border-radius: 4px;
-    border: 0 solid transparent;
+    padding: 0 10px;
+    display: inline-block; /* Asegura que el dropdown no ocupe toda la línea */
 }
 
+/* Botón dentro del dropdown */
 .btn-menu {
     color: white;
-    width: 100px;
-    height: 50px;
+    padding: 10px 20px; /* Añadir más padding para hacerlo más consistente */
+    border-radius: 4px; /* Bordes redondeados */
 }
+
+/* Sin foco o sombra en el botón */
 .btn-menu:focus {
     outline: none;
     box-shadow: none;
 }
+
+/* Hover del botón */
 .btn-menu:hover {
-    color: white;
     background: #8ca1ce;
 }
 
+/* Estilos para los enlaces */
 a {
     margin: 10px auto;
+    display: inline-block; /* Asegura que no ocupe toda la fila */
 }
 
+/* Botones de formulario */
 form .btn-color {
     background: #474e86;
     color: white;
+    padding: 10px 20px; /* Añadir padding */
+    border-radius: 4px;
 }
 
 form .btn-color:hover {
     background: #8ca1ce;
-    color: white;
 }
+
+/* Estilos para los enlaces PDF */
 a.pdf {
     background: #474e86;
     color: white;
+    padding: 10px 20px; /* Añadir padding */
+    border-radius: 4px;
+    display: inline-block; /* Asegura que no ocupe toda la línea */
 }
+
 a.pdf:hover {
     background: #8ca1ce;
-    color: white;
 }
+
+/* Paginación personalizada */
 .custom-pagination .pagination {
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Centra la paginación */
 }
 
 .custom-pagination .pagination .page-item .page-link {

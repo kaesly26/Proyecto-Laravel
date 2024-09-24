@@ -28,7 +28,7 @@
                     <td>{{$categoria->nombre_categoria}}</td>
                     <td>{{$categoria->descripcion_categoria}}</td>
                     <td>
-                        <a href="">Editar</a>
+                        <a href="{{route('categoria.edit', $categoria->id_categoria)}}">Editar</a>
                     </td>
                     <td>
                         <button type="submit" onclick="confirmDelete('{{ $categoria->id_categoria}}')">Eliminar</button>

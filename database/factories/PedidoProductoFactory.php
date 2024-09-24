@@ -15,8 +15,8 @@ class PedidoProductoFactory extends Factory
     {
         return [
             'pedido_id' => Pedido::factory(), 
-            'producto_id' => Producto::factory(), // Crea un producto nuevo si no hay ninguno
-            'cantidad' => $this->faker->numberBetween(1, 5), // Cantidad entre 1 y 5
+            'producto_id' => Producto::factory(),
+            'cantidad' => $this->faker->numberBetween(1, 5), 
         ];
     }
 }

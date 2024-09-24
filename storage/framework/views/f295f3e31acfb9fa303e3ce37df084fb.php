@@ -28,7 +28,7 @@
                     <td><?php echo e($categoria->nombre_categoria); ?></td>
                     <td><?php echo e($categoria->descripcion_categoria); ?></td>
                     <td>
-                        <a href="">Editar</a>
+                        <a href="<?php echo e(route('categoria.edit', $categoria->id_categoria)); ?>">Editar</a>
                     </td>
                     <td>
                         <button type="submit" onclick="confirmDelete('<?php echo e($categoria->id_categoria); ?>')">Eliminar</button>
