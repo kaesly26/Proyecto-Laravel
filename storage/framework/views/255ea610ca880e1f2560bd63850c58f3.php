@@ -82,7 +82,7 @@
                     </li>
 
                     <li class="list__inside">
-                        <a href="#" class="nav__link nav__link--inside">Reporte de Pedidos </a>
+                        <a href="<?php echo e(route('pedidos.create')); ?>" class="nav__link nav__link--inside">Entrada de pedidos</a>
                     </li>
                 </ul>
 
