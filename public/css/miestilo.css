@@ -66,7 +66,7 @@ a {
 
 /* Botones de formulario */
 form .btn-color {
-    background: #6C48C5;
+    background: #4E31AA;
     color: white;
     padding: 10px 20px; /* Añadir padding */
     border-radius: 4px;
@@ -78,7 +78,7 @@ form .btn-color:hover {
 
 /* Estilos para los enlaces PDF */
 a.pdf {
-    background: #6C48C5;
+    background: #4E31AA;
     color: white;
     padding: 10px 20px; /* Añadir padding */
     border-radius: 4px;
