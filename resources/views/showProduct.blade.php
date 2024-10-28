@@ -6,14 +6,14 @@
 
 <div class="form-container">
     <div class="form-categoria">
-        <form action="{{ route('productos.create') }}" method="get">
+        <form action="{{ route('productos.create') }}" method="get" class="mb-3">
             @csrf
-            <button type="submit">Crear Producto</button>
+            <button type="submit" class="btn" style="background: #4E31AA; color: #F5F7F8">Crear Producto</button>
         </form>
 
+        <h4 class="mb-3">Lista de Productos</h4>
         <table class="table table-bordered table-striped">
             <thead>
-                <h4>Lista de Productos</h4>
                 <tr>
                     <th>Id Producto</th>
                     <th>Nombre Producto</th>
@@ -29,11 +29,9 @@
                     <td>{{ $producto->nombre_producto }}</td>
                     <td>{{ $producto->precio }}</td>
                     <td>{{ $producto->descripcion }}</td>
+                    <td><a href="{{ route('productos.edit', $producto->id_producto) }}" class="btn btn-warning">Editar</a></td>
                     <td>
-                        <a href="{{ route('productos.edit', $producto->id_producto) }}">Editar</a>
-                    </td>
-                    <td>
-                        <button type="submit" onclick="confirmDelete('{{ $producto->id_producto }}')">Eliminar</button>
+                        <button class="btn btn-danger" onclick="confirmDelete('{{ $producto->id_producto }}')">Eliminar</button>
                     </td>
                 </tr>
                 @endforeach
@@ -41,6 +39,7 @@
         </table>
     </div>
 </div>
+
 
 <script>
     function confirmDelete(id) {

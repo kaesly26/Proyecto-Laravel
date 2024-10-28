@@ -29,7 +29,7 @@
                     <td>{{ ucfirst($pedido->estado) }}</td>
                     <td>
                         <!-- Botón para mostrar/ocultar productos -->
-                        <button class="btn btn-info" type="button" onclick="toggleProducts('{{ $pedido->id }}')">
+                        <button class="btn " type="button" style="background: #4E31AA; color: #F5F7F8" onclick="toggleProducts('{{ $pedido->id }}')">
                             Ver Productos
                         </button>
                     </td>

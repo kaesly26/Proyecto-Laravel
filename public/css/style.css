@@ -7,12 +7,16 @@
 }
 
 body {
-    background: #eaebef;
+   background-image: url("/img/fondo-purpura-hamburguesas.avif"); /* Usa '/' y asegúrate de URL encode */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     font-family: "Poppins", sans-serif;
 }
 .container {
     position: absolute;
-    top: 10px;
+    top: 2px;
     width: 180px;
     height: 180px;
     margin: 40px 60px;
@@ -87,7 +91,6 @@ body {
     height: 0;
 }
 
-
 .form-container {
     position: relative;
     background: white;
@@ -99,7 +102,7 @@ body {
 .form-categoria {
     margin: 0 auto;
     padding: 40px 40px;
-    width: 100%
+    width: 100%;
 }
 .table {
     width: 100%; /* La tabla ocupa todo el ancho del contenedor */
@@ -112,7 +115,7 @@ body {
     text-align: left;
     padding: 10px;
 }
-a{
+a {
     text-decoration: none;
     color: black;
 }

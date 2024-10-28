@@ -19,7 +19,7 @@
                 <label class="form-label">Descripción</label><br>
                 <textarea name="descripcion_categoria" rows="4" cols="20" required><?php echo e(old('descripcion_categoria', isset($update) ? $update->descripcion_categoria : '')); ?></textarea>
             </div>
-            <button type="submit"><?php echo e(isset($update) ? 'Actualizar' : 'Guardar'); ?></button>
+            <button type="submit" class="btn btn-primary"><?php echo e(isset($update) ? 'Actualizar' : 'Guardar'); ?></button>
         </form>
     </div>
 </div>

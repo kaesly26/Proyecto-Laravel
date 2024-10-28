@@ -49,7 +49,7 @@
             @endif
         </div>
 
-        <button type="submit">{{ isset($update) ? 'Actualizar' : 'Guardar' }}</button>
+        <button type="submit" class="btn btn-primary">{{ isset($update) ? 'Actualizar' : 'Guardar' }}</button>
     </form>
     <br>
 </div>

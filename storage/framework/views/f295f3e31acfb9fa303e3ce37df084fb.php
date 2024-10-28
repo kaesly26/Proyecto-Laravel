@@ -8,7 +8,7 @@
     <div class="form-categoria">
         <form action="<?php echo e(route('categoria.create')); ?>" method="get">
             <?php echo csrf_field(); ?>
-            <button type="submit">Crear Categoria</button>
+            <button type="submit" class="btn" style="background: #4E31AA; color: #F5F7F8">Crear Categoria</button>
         </form>
         <table class="table table-bordered table-striped">
             <thead>
@@ -28,10 +28,10 @@
                     <td><?php echo e($categoria->nombre_categoria); ?></td>
                     <td><?php echo e($categoria->descripcion_categoria); ?></td>
                     <td>
-                        <a href="<?php echo e(route('categoria.edit', $categoria->id_categoria)); ?>">Editar</a>
+                        <a href="<?php echo e(route('categoria.edit', $categoria->id_categoria)); ?>" class="btn btn-warning">Editar</a>
                     </td>
                     <td>
-                        <button type="submit" onclick="confirmDelete('<?php echo e($categoria->id_categoria); ?>')">Eliminar</button>
+                        <button type="submit" class="btn btn-danger" onclick="confirmDelete('<?php echo e($categoria->id_categoria); ?>')">Eliminar</button>
                     </td>
                 </tr>
                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>

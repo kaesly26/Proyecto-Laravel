@@ -14,10 +14,10 @@
 </head>
 <header>
     <div class="container">
-        <img src="<?php echo e(asset('img/Russo.png')); ?>" alt="" height="150px" width="150px">
+        <img src="<?php echo e(asset('img/Russo.png')); ?>" alt="" height="200px" width="240px">
     </div>
     <div class="form-logout dropdown">
-        <button class="btn logout dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+        <button class="btn logout dropdown-toggle" style="background: #4E31AA; color: #F5F7F8" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
             <?php if(Auth::check()): ?>
             <?php echo e(Auth::user()->name_user); ?>
 
@@ -26,12 +26,12 @@
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
             <li>
                 <form action="<?php echo e(route('logout')); ?>" method="get">
-                    <button type="submit" class="dropdown-item">Logout</button>
+                    <button type="submit" class="dropdown-item ">Logout</button>
                 </form>
             </li>
         </ul>
     </div>
-    <nav class="nav">
+    <nav class=" nav">
         <ul class="list">
 
             <li class="list__item">
@@ -76,7 +76,7 @@
                 </div>
 
                 <ul class="list__show">
-                
+
                     <li class="list__inside">
                         <a href="<?php echo e(route('pedidos.index')); ?>" class="nav__link nav__link--inside">Nuevos Pedidos </a>
                     </li>

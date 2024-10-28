@@ -8,7 +8,7 @@
     <div class="form-categoria">
         <form action="{{ route('categoria.create')}}" method="get">
             @csrf
-            <button type="submit">Crear Categoria</button>
+            <button type="submit" class="btn" style="background: #4E31AA; color: #F5F7F8">Crear Categoria</button>
         </form>
         <table class="table table-bordered table-striped">
             <thead>
@@ -28,10 +28,10 @@
                     <td>{{$categoria->nombre_categoria}}</td>
                     <td>{{$categoria->descripcion_categoria}}</td>
                     <td>
-                        <a href="{{route('categoria.edit', $categoria->id_categoria)}}">Editar</a>
+                        <a href="{{route('categoria.edit', $categoria->id_categoria)}}" class="btn btn-warning">Editar</a>
                     </td>
                     <td>
-                        <button type="submit" onclick="confirmDelete('{{ $categoria->id_categoria}}')">Eliminar</button>
+                        <button type="submit" class="btn btn-danger" onclick="confirmDelete('{{ $categoria->id_categoria}}')">Eliminar</button>
                     </td>
                 </tr>
                 @endforeach

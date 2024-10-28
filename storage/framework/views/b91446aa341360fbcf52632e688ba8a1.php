@@ -6,14 +6,14 @@
 
 <div class="form-container">
     <div class="form-categoria">
-        <form action="<?php echo e(route('productos.create')); ?>" method="get">
+        <form action="<?php echo e(route('productos.create')); ?>" method="get" class="mb-3">
             <?php echo csrf_field(); ?>
-            <button type="submit">Crear Producto</button>
+            <button type="submit" class="btn" style="background: #4E31AA; color: #F5F7F8">Crear Producto</button>
         </form>
 
+        <h4 class="mb-3">Lista de Productos</h4>
         <table class="table table-bordered table-striped">
             <thead>
-                <h4>Lista de Productos</h4>
                 <tr>
                     <th>Id Producto</th>
                     <th>Nombre Producto</th>
@@ -29,11 +29,9 @@
                     <td><?php echo e($producto->nombre_producto); ?></td>
                     <td><?php echo e($producto->precio); ?></td>
                     <td><?php echo e($producto->descripcion); ?></td>
+                    <td><a href="<?php echo e(route('productos.edit', $producto->id_producto)); ?>" class="btn btn-warning">Editar</a></td>
                     <td>
-                        <a href="<?php echo e(route('productos.edit', $producto->id_producto)); ?>">Editar</a>
-                    </td>
-                    <td>
-                        <button type="submit" onclick="confirmDelete('<?php echo e($producto->id_producto); ?>')">Eliminar</button>
+                        <button class="btn btn-danger" onclick="confirmDelete('<?php echo e($producto->id_producto); ?>')">Eliminar</button>
                     </td>
                 </tr>
                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
@@ -41,6 +39,7 @@
         </table>
     </div>
 </div>
+
 
 <script>
     function confirmDelete(id) {

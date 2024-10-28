@@ -1,6 +1,6 @@
 /* Estilos para la barra de navegación */
 .navbar {
-    background: #525ca3;
+    background: #4E31AA;
     padding: 15px; /* Añadir padding para evitar que el contenido se vea pegado a los bordes */
 }
 
@@ -34,7 +34,7 @@ input.form-control {
 
 /* Dropdown */
 .dropdown {
-    background: #474e86;
+    background: #6C48C5;
     border-radius: 4px;
     padding: 0 10px;
     display: inline-block; /* Asegura que el dropdown no ocupe toda la línea */
@@ -55,7 +55,7 @@ input.form-control {
 
 /* Hover del botón */
 .btn-menu:hover {
-    background: #8ca1ce;
+    background: #A594F9;
 }
 
 /* Estilos para los enlaces */
@@ -66,19 +66,19 @@ a {
 
 /* Botones de formulario */
 form .btn-color {
-    background: #474e86;
+    background: #6C48C5;
     color: white;
     padding: 10px 20px; /* Añadir padding */
     border-radius: 4px;
 }
 
 form .btn-color:hover {
-    background: #8ca1ce;
+    background: #A594F9;
 }
 
 /* Estilos para los enlaces PDF */
 a.pdf {
-    background: #474e86;
+    background: #6C48C5;
     color: white;
     padding: 10px 20px; /* Añadir padding */
     border-radius: 4px;
@@ -86,7 +86,7 @@ a.pdf {
 }
 
 a.pdf:hover {
-    background: #8ca1ce;
+    background: #A594F9;
 }
 
 /* Paginación personalizada */
@@ -103,14 +103,14 @@ a.pdf:hover {
 
 .custom-pagination .pagination .page-item .page-link:hover {
     color: white;
-    background-color: #525ca3;
-    border-color: #474e86;
+    background-color: #4E31AA;
+    border-color: #6C48C5;
 }
 
 .custom-pagination .pagination .page-item.active .page-link {
     color: white;
-    background-color: #525ca3;
-    border-color: #474e86;
+    background-color: #4E31AA;
+    border-color: #6C48C5;
 }
 
 .custom-pagination .pagination .page-item.disabled .page-link {

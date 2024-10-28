@@ -50,7 +50,7 @@
             <?php endif; ?>
         </div>
 
-        <button type="submit"><?php echo e(isset($update) ? 'Actualizar' : 'Guardar'); ?></button>
+        <button type="submit" class="btn btn-primary"><?php echo e(isset($update) ? 'Actualizar' : 'Guardar'); ?></button>
     </form>
     <br>
 </div>

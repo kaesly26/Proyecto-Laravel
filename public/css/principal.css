@@ -5,7 +5,7 @@
 }
 
 nav {
-    background: #525ca3;
+    background: #4E31AA;
     display: flex;
     padding: 5px;
     margin: 1px;
@@ -21,7 +21,7 @@ ul {
 }
 
 li {
-    background: #474e86;
+    background: #6C48C5;
     display: inline-flex;
     padding: 10px 20px;
     margin: 10px;
@@ -40,13 +40,13 @@ form {
 }
 
 form .btn-color {
-    background: #525ca3;
+    background: #4E31AA;
     color: white;
 }
 
 form .btn-color:hover,
 li:hover {
-    background: #8ca1ce;
+    background: #A594F9;
     color: white;
 }
 
