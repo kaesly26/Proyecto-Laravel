@@ -1,5 +1,3 @@
-
-
 <?php $__env->startSection('title', isset($update) ? 'Editar categoria' : 'Crear categoria'); ?>
 
 <?php $__env->startSection('content'); ?>

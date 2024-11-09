@@ -32,7 +32,6 @@
     </div>
     <nav class=" nav">
         <ul class="list">
-
             <li class="list__item">
                 <div class="list__button">
                     <img src="{{asset('assets/dashboard.svg')}}" class="list__img">
@@ -130,6 +129,11 @@
                 });
             });
         });
+
+        function toggleMenu() {
+            const nav = document.querySelector('.nav');
+            nav.classList.toggle('open');
+        }
     </script>
     @yield('scripts')
 </body>

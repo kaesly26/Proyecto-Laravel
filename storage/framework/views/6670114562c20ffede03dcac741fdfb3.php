@@ -1,5 +1,3 @@
-
-
 <?php $__env->startSection('title', isset($update) ? 'Editar Producto' : 'Crear Producto'); ?>
 
 <?php $__env->startSection('content'); ?>
