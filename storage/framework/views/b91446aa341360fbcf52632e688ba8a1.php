@@ -25,7 +25,7 @@
                 <tr>
                     <td><?php echo e($producto->id_producto); ?></td>
                     <td><?php echo e($producto->nombre_producto); ?></td>
-                    <td><?php echo e($producto->precio); ?></td>
+                    <td>$<?php echo e(number_format($producto->precio, 2)); ?></td>
                     <td><?php echo e($producto->descripcion); ?></td>
                     <td><a href="<?php echo e(route('productos.edit', $producto->id_producto)); ?>" class="btn btn-warning">Editar</a></td>
                     <td>
